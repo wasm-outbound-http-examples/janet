@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP request for Janet</title>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+<h2>HTTP Request from inside WASM using Janet-lang and EMSCRIPTEN_FETCH_SYNCHRONOUS</h2>
+
+<p>This example uses custom Janet function implemented using
+    <code><a href="https://emscripten.org/docs/api_reference/fetch.html#synchronous-fetches">emscripten_fetch()</a></code>
+     in synchronous mode.</p>
+<p>See the output in browser developer console.</p>
+
+<p>Actual code:</p>
+<pre>
+
+(print (httpget `https://httpbin.org/anything`))
+
+</pre>
+<section>
+    <h4>Info</h4>
+    <ul>
+        <li><a href="https://github.com/wasm-outbound-http-examples/janet/tree/main/browser-sync-xhr/">Demo source code</a></li>
+        <li>Versions used on the moment of build:<small>
+            Janet: <a href="https://github.com/janet-lang/janet/releases/tag/v1.34.0">v1.34.0</a>,
+            Emscripten: <a href="https://github.com/emscripten-core/emscripten/tree/3.1.61">v3.1.61</a>.
+        </small></li>
+    </ul>
+</section>
+<footer><small>Created for (wannabe-awesome) <a href="https://github.com/vasilev/HTTP-request-from-inside-WASM">list</a></small></footer>
+</body>
+</html>
